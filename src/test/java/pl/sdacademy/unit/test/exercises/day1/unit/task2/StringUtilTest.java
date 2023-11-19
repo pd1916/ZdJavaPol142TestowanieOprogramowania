@@ -39,4 +39,48 @@ class StringUtilTest {
         assertThat(result).isFalse(); //assertJ
     }
 
+    @Test
+    void shouldReturnTrueIfStringContainsOnlySpaces() {
+        //given
+        String input = " ";
+        //when
+        boolean result = StringUtil.isBlank(input);
+        //then
+        assertTrue(result);
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    void shouldReturnFalseIfStringIsNotEmptyTest2() {
+        //given
+        String input = " java";
+        //when
+        boolean result = StringUtil.isBlank(input);
+        //then
+        assertFalse(result);
+        assertThat(result).isFalse();
+    }
+
+    @Test
+    void shouldReturnFalseIfStringIsNotEmptyTest3() {
+        //given
+        String input = "java ";
+        //when
+        boolean result = StringUtil.isBlank(input);
+        //then
+        assertFalse(result);
+        assertThat(result).isFalse();
+    }
+
+    @Test
+    void shouldReturnFalseIfStringIsNotEmptyTest4() {
+        //given
+        String input = " java ";
+        //when
+        boolean result = StringUtil.isBlank(input);
+        //then
+        assertFalse(result);
+        assertThat(result).isFalse();
+    }
+
 }
