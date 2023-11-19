@@ -33,7 +33,7 @@ public class Account {
 
     private static boolean validateAccountNumber(Account account) {
         //rzucenie wyjątkiem?
-        if (account.getAccountNumber().length() != 26
+        if(account.getAccountNumber().length() != 26
                 || !account.getAccountNumber().matches("[0-9]*")) {
             System.out.println("Wrong account number: " + account.getAccountNumber());
             return false;

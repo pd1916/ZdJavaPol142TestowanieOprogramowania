@@ -2,7 +2,8 @@ package pl.sdacademy.unit.test.exercises.day1.tdd.task5;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class EmailValidationTest {
     @Test

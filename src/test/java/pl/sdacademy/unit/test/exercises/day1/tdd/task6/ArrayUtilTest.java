@@ -3,7 +3,7 @@ package pl.sdacademy.unit.test.exercises.day1.tdd.task6;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class ArrayUtilTest {
     @Test
