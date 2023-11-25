@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PalindromeCheckerTest {
     /*
@@ -26,12 +26,12 @@ class PalindromeCheckerTest {
 
     @ParameterizedTest
     @CsvSource({"kajak, true",
-                "sedes, true",
-                "potop, true",
-                "kobyla ma maly bok, true",
-                "'kobyla ma, maly bok', false",
-                "java, false",
-                "programowanie, false"})
+            "sedes, true",
+            "potop, true",
+            "kobyla ma maly bok, true",
+            "'kobyla ma, maly bok', false",
+            "java, false",
+            "programowanie, false"})
     void shouldVerifyIfStringIsPalindrome(String input, boolean expectedResult) {
         //when
         boolean result = PalindromeChecker.isPalindrome(input);
@@ -90,9 +90,9 @@ class PalindromeCheckerTest {
 
     private static Stream<Arguments> dataProviderForPerson() {
         return Stream.of(
-          Arguments.of(new PersonNew("Nowak", 8), true),
-          Arguments.of(new PersonNew("Kowalski", 20), false),
-          Arguments.of(null, false)
+                Arguments.of(new PersonNew("Nowak", 8), true),
+                Arguments.of(new PersonNew("Kowalski", 20), false),
+                Arguments.of(null, false)
         );
     }
 

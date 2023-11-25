@@ -7,7 +7,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class CalculatorServiceTest {
 
@@ -20,7 +21,7 @@ class CalculatorServiceTest {
 
     @ParameterizedTest
     @MethodSource("dataProviderForExceptions")
-    void shouldThrowExceptionWhenAnyOfArgumentIsNull(String a, String b){
+    void shouldThrowExceptionWhenAnyOfArgumentIsNull(String a, String b) {
         //when & then
 
         // jUnit

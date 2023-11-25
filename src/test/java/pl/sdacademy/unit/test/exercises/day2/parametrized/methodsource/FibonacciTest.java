@@ -3,12 +3,11 @@ package pl.sdacademy.unit.test.exercises.day2.parametrized.methodsource;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import pl.sdacademy.unit.test.exercises.day2.parametrized.csvsource.PersonNew;
 
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FibonacciTest {
     /*

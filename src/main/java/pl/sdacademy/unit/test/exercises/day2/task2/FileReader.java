@@ -5,19 +5,19 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class FileReader {
-     public static int counterCharacters(File file) {
-         validate(file);
-         //logika
-         int counter = 0;
-         try (Scanner scanner = new Scanner(file)){
-             while(scanner.hasNextLine()) {
-                 counter += scanner.nextLine().length();
-             }
-         } catch(FileNotFoundException e) {
-             throw new RuntimeException(e);
-         }
-         return counter;
-     }
+    public static int counterCharacters(File file) {
+        validate(file);
+        //logika
+        int counter = 0;
+        try(Scanner scanner = new Scanner(file)) {
+            while(scanner.hasNextLine()) {
+                counter += scanner.nextLine().length();
+            }
+        } catch(FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        return counter;
+    }
 
     private static void validate(File file) {
         if(file != null && file.exists()) {
